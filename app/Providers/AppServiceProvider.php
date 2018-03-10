@@ -17,7 +17,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        DB::statement(DB::raw('PRAGMA foreign_keys = ON;'));
+        if (config('database.default') == 'sqlite') {
+            DB::statement(DB::raw('PRAGMA foreign_keys = ON;'));
+        }
 
         View::composer('admin.*', function ($view) {
             $view->with('module', 'admin');
