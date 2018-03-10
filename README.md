@@ -14,6 +14,8 @@ Laravel RSS feed aggregator is an example project written on Laravel 5.6 to show
 ### Installation
 
 ```sh
+git clone https://github.com/xdvx/Laravel-RSS-feed-aggregator.git
+cd Laravel-RSS-feed-aggregator
 composer install
 ```
 Rename ```.env.example``` to ```.env``` and fill your configuration settings.
