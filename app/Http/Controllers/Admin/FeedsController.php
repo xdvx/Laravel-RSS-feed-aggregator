@@ -42,7 +42,7 @@ class FeedsController extends Controller
     public function create()
     {
         $categories = Category::all();
-        $selected = collect([2, 3]);
+        $selected = collect([]);
 
         return view('admin.feeds.form', compact('categories', 'selected'));
     }
